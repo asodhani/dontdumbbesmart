@@ -1,0 +1,47 @@
+
+/* Site color overrides from the 2019 customizer, plus small cleanup. */
+:root {
+  --color-bg: #000000;
+  --color-text: #999999;
+  --color-anchor: #7fe214;
+  --color-border: #5e5951;
+  --color-title: #019117;
+  --color-tagline: #191919;
+}
+
+body.custom-background { background-color: #000000; }
+
+h1, h2, h3, h4, h5, h6, strong {
+  color: white;
+}
+
+.nav-subtitle, .post-navigation .nav-links {
+  display: none;
+}
+
+/* Keep long words and screenshot rows inside the viewport without changing the desktop look. */
+.entry-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Unfloat aligned captions on small screens so text does not wrap character-by-character. */
+@media (max-width: 640px) {
+  .entry-content .alignright,
+  .entry-content .alignleft,
+  .entry-content .wp-caption.alignright,
+  .entry-content .wp-caption.alignleft {
+    float: none;
+    display: block;
+    margin: 0 auto 1em auto;
+    width: auto !important;
+    max-width: 100%;
+  }
+}
+
+/* Comments stay visible as static text; no reply form. */
+.comment-respond, .reply { display: none; }
